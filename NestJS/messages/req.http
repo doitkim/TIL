@@ -1,0 +1,15 @@
+@server = http://localhost:3000
+
+###
+GET {{server}}/messages
+
+###
+POST {{server}}/messages
+Content-Type: application/json
+
+{
+    "content":"hi there"
+}
+
+###
+GET {{server}}/messages/966

@@ -1,0 +1,74 @@
+@server = http://localhost:3000
+
+###
+POST {{server}}/auth/signup
+Content-Type: application/json
+
+{
+    "email":"asdf15@asdf.com",
+    "password":"asdfasdasd"
+}
+
+###
+POST {{server}}/auth/signin
+Content-Type: application/json
+
+{
+    "email":"asdf15@asdf.com",
+    "password":"asdfasdasd"
+}
+
+###
+GET {{server}}/auth/whoami
+
+###
+POST {{server}}/auth/signout
+
+###
+GET {{server}}/auth/
+
+###
+GET {{server}}/auth?email=asdf@asdf.com
+
+###
+DELETE  {{server}}/auth/2
+
+###
+PATCH {{server}}/auth/2
+Content-Type: application/json
+
+{
+    "email":"aaaa@aaaa.com"
+}
+
+###
+GET {{server}}/auth/colors/red
+
+###
+GET {{server}}/auth/colors
+
+
+###
+POST {{server}}/reports
+Content-Type: application/json
+
+{
+    "make":"ford",
+    "model":"mustang",
+    "year":1982,
+    "mileage":50000,
+    "lng":45,
+    "lat":45,
+    "price":20000
+}
+
+###
+PATCH  {{server}}/reports/3
+Content-Type: application/json
+
+{
+    "approved":true
+}
+
+###
+GET {{server}}/reports?make=ford&model=mustang&lng=45&lat=45&mileage=2000&year=1981

@@ -1,0 +1,28 @@
+@server = http://localhost:8000/v1
+
+###
+GET {{server}}/launches
+
+###
+POST {{server}}/launches
+Content-Type: application/json
+
+{
+    "mission":"Up and Awy",
+    "rocket":"ZTM Experimental IS1",
+    "target":"Kepler-452 b",
+    "launchDate":"January 17, 2030"
+}
+
+
+###
+DELETE {{server}}/launches/111
+
+###
+GET {{server}}/planets
+
+###
+GET {{server}}/launches/100
+
+###
+GET {{server}}/launches?limit=5&page=2

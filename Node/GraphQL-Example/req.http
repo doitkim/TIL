@@ -1,0 +1,10 @@
+@server = http://localhost:3000
+
+###
+
+POST {{server}}/graphql
+Content-Type: application/json
+
+{
+    "query":"{description}"
+}
