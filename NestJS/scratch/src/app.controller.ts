@@ -1,14 +1,14 @@
 import { Controller, Get } from "@nestjs/common";
-
-@Controller("/v1")
+// 컨트롤러
+@Controller("/app") // 라우트 핸들러
 export class AppController {
-  @Get("/hello")
+  @Get("/asdf") // 라우트 핸들러
   getRootRoute() {
     return "hi there!";
   }
 
   @Get("/bye")
   getByeThere() {
-    return "bye there!";
+    return "Bye There!";
   }
 }
