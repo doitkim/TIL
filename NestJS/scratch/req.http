@@ -1,7 +1,0 @@
-@server = http://localhost:3000
-
-###
-GET {{server}}/v1/hello
-
-###
-GET {{server}}/v1/bye
