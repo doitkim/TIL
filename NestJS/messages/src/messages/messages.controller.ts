@@ -8,16 +8,12 @@ import {
 } from '@nestjs/common';
 import { CreateMessageDto } from './dtos/create-message.dto';
 import { MessagesService } from './messages.service';
+import { Injectable } from '@nestjs/common';
 
 @Controller('messages')
 export class MessagesController {
-  messagesService: MessagesService;
+  constructor(public messagesService: MessagesService) {}
 
-  constructor() {
-    // Service is creating its own dependencies
-    // DON'T DO THIS ON REAL APPS
-    this.messagesService = new MessagesService();
-  }
   @Get()
   listMessages() {
     return this.messagesService.findAll();
